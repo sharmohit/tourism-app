@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">TourismApp</string>
+    <string name="app_name">Toronto Tourism</string>
+
+    <string name="email_hint">Enter email</string>
+    <string name="password_hint">Enter password</string>
+    <string name="remember_me_text">Remember Me?</string>
+    <string name="login_text">Login</string>
+    <string name="attractions_title_text">Toronto Attractions</string>
+    <string name="logout_text">Logout</string>
+    <string name="back_text">Go Back</string>
 </resources>
