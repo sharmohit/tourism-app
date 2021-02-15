@@ -16,7 +16,13 @@
     <string name="email_empty_error">Email can\'t be blank!</string>
     <string name="email_invalid_error">Invalid email format!</string>
     <string name="password_empty_error">Password can\'t be blank!</string>
+    <string name="invalid_user_error">User not found!</string>
 
-    <string name="welcome_msg">\Welcome </string>
+    <string name="welcome_msg">Welcome</string>
     <string name="session_intent_extra">session</string>
+
+    <string name="users_json_filename">users.json</string>
+    <string name="users_json_key">users</string>
+    <string name="username_json_key">username</string>
+    <string name="password_json_key">password</string>
 </resources>

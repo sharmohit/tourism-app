@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         this.session = new Session();
+        this.session.loadUsersJSONFile(this, getString(R.string.users_json_filename));
         if (this.session.restoreSession(this)) {
             this.startAttractionsActivity(this.session);
         }
@@ -39,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         if (validateInput(email, password)) {
             if (this.session.login(this, email, password, cbRememberMe.isChecked())) {
                 this.startAttractionsActivity(this.session);
+            } else {
+                Toast.makeText(this, R.string.invalid_user_error, Toast.LENGTH_SHORT).show();
             }
         }
     }

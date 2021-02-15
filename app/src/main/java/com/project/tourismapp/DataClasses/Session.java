@@ -3,27 +3,52 @@ package com.project.tourismapp.DataClasses;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.project.tourismapp.Helpers.JSONHelper;
 import com.project.tourismapp.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.Serializable;
 
 public class Session implements Serializable {
 
     private User user;
+    private transient JSONArray userObjects; //Exclude from serialization
 
     public boolean login(Context context, String email, String password, boolean saveSession) {
         this.user = new User(email);
 
-        if (saveSession) {
-            storeSession(context, email, password);
+        try {
+            for (int i = 0; i < this.userObjects.length(); i++) {
+                JSONObject user = userObjects.getJSONObject(i);
+                if (user.getString(context.getString(R.string.username_json_key)).equals(email) &&
+                        user.getString(context.getString(R.string.password_json_key)).equals(password)) {
+
+                    if (saveSession) {
+                        storeSession(context, email, password);
+                    }
+                    return true;
+                }
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
 
-        return true;
+        return false;
     }
 
-    public boolean authenticate() {
-        //TODO Check login credentials here
-        return true;
+    public void loadUsersJSONFile(Context context, String usersFileName) {
+        JSONHelper jsonHelper = new JSONHelper();
+        try {
+            this.userObjects = jsonHelper.
+                    convertToJSONObject(jsonHelper.loadJSONFile(context, usersFileName)).
+                    getJSONArray(context.getString(R.string.users_json_key));
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     public void logout(Context context) {

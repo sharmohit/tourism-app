@@ -1,0 +1,12 @@
+{
+  users: [
+    {
+      "username": "thanos@gmail.com",
+      "password": "1234"
+    },
+    {
+      "username": "wonderwoman@yahoo.com",
+      "password": "abc!!"
+    }
+  ]
+}
