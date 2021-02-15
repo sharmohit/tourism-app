@@ -8,4 +8,15 @@
     <string name="attractions_title_text">Toronto Attractions</string>
     <string name="logout_text">Logout</string>
     <string name="back_text">Go Back</string>
+
+    <string name="preference_file_key">com.project.tourismapp.config</string>
+    <string name="remember_me_key">remember_me_key</string>
+    <string name="email_key">email_key</string>
+    <string name="password_key">password_key</string>
+    <string name="email_empty_error">Email can\'t be blank!</string>
+    <string name="email_invalid_error">Invalid email format!</string>
+    <string name="password_empty_error">Password can\'t be blank!</string>
+
+    <string name="welcome_msg">\Welcome </string>
+    <string name="session_intent_extra">session</string>
 </resources>

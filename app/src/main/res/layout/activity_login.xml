@@ -62,6 +62,7 @@
         android:layout_marginTop="72dp"
         android:onClick="login"
         android:text="@string/login_text"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
