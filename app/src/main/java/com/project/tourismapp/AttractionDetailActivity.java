@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ListView;
 
+import com.project.tourismapp.Adaptors.AttractionDetailAdaptor;
+import com.project.tourismapp.DataClasses.Attraction;
 import com.project.tourismapp.DataClasses.Session;
 
 public class AttractionDetailActivity extends AppCompatActivity {
@@ -18,9 +21,12 @@ public class AttractionDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_attraction_detail);
 
         Intent intent = getIntent();
-        if (intent != null) {
-            this.session = (Session) intent.getSerializableExtra(getString(R.string.session_intent_extra));
-        }
+        this.session = (Session) intent.getSerializableExtra(getString(R.string.session_intent_extra));
+        Attraction attraction = (Attraction) intent.getSerializableExtra(getString(R.string.session_intent_extra));
+
+        ListView lvAttractionDetails = findViewById(R.id.lvAttractionDetails);
+        AttractionDetailAdaptor attractionDetailAdaptor = new AttractionDetailAdaptor(this, new Attraction[]{attraction});
+        lvAttractionDetails.setAdapter(attractionDetailAdaptor);
     }
 
     @Override
@@ -37,7 +43,7 @@ public class AttractionDetailActivity extends AppCompatActivity {
 
     public void logout(View view) {
         this.session.logout(this);
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, com.project.tourismapp.LoginActivity.class);
         startActivity(intent);
         finish();
     }

@@ -20,9 +20,22 @@
 
     <string name="welcome_msg">Welcome</string>
     <string name="session_intent_extra">session</string>
+    <string name="attraction_intent_extra">attraction</string>
 
     <string name="users_json_filename">users.json</string>
     <string name="users_json_key">users</string>
     <string name="username_json_key">username</string>
     <string name="password_json_key">password</string>
+
+    <string name="attractions_json_key">attractions</string>
+    <string name="attraction_name_key">name</string>
+    <string name="attraction_description_key">description</string>
+    <string name="attraction_address_key">address</string>
+    <string name="attraction_price_key">price</string>
+    <string name="attraction_icon_key">icon</string>
+    <string name="attraction_photos_key">photos</string>
+    <string name="attraction_phone_key">phone</string>
+    <string name="attraction_website_key">website</string>
+
+    <string name="phone_uri">tel://</string>
 </resources>

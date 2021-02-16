@@ -1,0 +1,19 @@
+{
+  "attractions": [
+    {
+      "name": "CN Tower",
+      "description": "Iconic tower with a revolving restaurant",
+      "address": "CN Tower, 290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
+      "price": 195.00,
+      "icon": "icon",
+      "photos": [
+        "photo1",
+        "photo2",
+        "photo3",
+        "photo4"
+      ],
+      "phone": "(855) 553-3833",
+      "website": "https://www.cntower.ca/en-ca/home.html"
+    }
+  ]
+}

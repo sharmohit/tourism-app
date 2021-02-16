@@ -79,6 +79,7 @@ public class LoginActivity extends AppCompatActivity {
     private void startAttractionsActivity(Session session) {
         Intent intent = new Intent(this, AttractionsActivity.class);
         intent.putExtra(getString(R.string.session_intent_extra), session);
+        intent.putExtra(getString(R.string.welcome_msg), true);
         startActivity(intent);
         finish();
     }
