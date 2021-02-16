@@ -43,7 +43,7 @@ public class Session implements Serializable {
         JSONHelper jsonHelper = new JSONHelper();
         try {
             this.userObjects = jsonHelper.
-                    convertToJSONObject(jsonHelper.loadJSONFile(context, usersFileName)).
+                    convertToJSONObject(jsonHelper.assetsFileReader(context, usersFileName)).
                     getJSONArray(context.getString(R.string.users_json_key));
 
         } catch (JSONException e) {

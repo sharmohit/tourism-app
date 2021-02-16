@@ -5,10 +5,12 @@ import java.io.Serializable;
 public class User implements Serializable {
     private String name;
     private String email;
+    private AttractionRating attractionRating;
 
     public User(String email) {
         this.email = email;
         this.name = email.split("@")[0];
+        this.attractionRating = new AttractionRating();
     }
 
     public String getName() {
@@ -17,5 +19,9 @@ public class User implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public AttractionRating getAttractionRating() {
+        return attractionRating;
     }
 }

@@ -3,6 +3,7 @@ package com.project.tourismapp.DataClasses;
 import java.io.Serializable;
 
 public class Attraction implements Serializable {
+    private int id;
     private String name;
     private String description;
     private String address;
@@ -11,6 +12,14 @@ public class Attraction implements Serializable {
     private String photos[];
     private String phone;
     private String website;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

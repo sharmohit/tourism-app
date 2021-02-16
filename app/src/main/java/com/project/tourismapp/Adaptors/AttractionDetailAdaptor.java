@@ -8,18 +8,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.project.tourismapp.DataClasses.Attraction;
+import com.project.tourismapp.DataClasses.Session;
 import com.project.tourismapp.R;
 
 public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
 
-    public AttractionDetailAdaptor(@NonNull Context context, @NonNull Attraction attractions[]) {
+    private Session session;
+
+    public AttractionDetailAdaptor(@NonNull Context context, Session session, @NonNull Attraction attractions[]) {
         super(context, 0, attractions);
+        this.session = session;
     }
 
     @NonNull
@@ -28,8 +33,7 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
 
         Attraction attraction = getItem(position);
 
-        if(convertView == null)
-        {
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_attraction_detail, parent, false);
         }
 
@@ -39,6 +43,7 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         TextView tvAttractionAddress = convertView.findViewById(R.id.tvAttractionDetailAddress);
         TextView tvAttractionPhone = convertView.findViewById(R.id.tvAttractionDetailPhone);
         TextView tvAttractionWeb = convertView.findViewById(R.id.tvAttractionDetailWeb);
+        RatingBar rbAttraction = convertView.findViewById(R.id.rbAttraction);
 
         ivAttractionMain.setImageResource(R.drawable.cn_tower_main);
         tvAttractionName.setText(attraction.getName());
@@ -46,6 +51,14 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         tvAttractionAddress.setText(attraction.getAddress());
         tvAttractionPhone.setText(attraction.getPhone());
         tvAttractionWeb.setText(attraction.getWebsite());
+
+        rbAttraction.setRating(this.session.getUser().getAttractionRating().getRating());
+        rbAttraction.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                session.getUser().getAttractionRating().setRating(rating);
+            }
+        });
 
         tvAttractionPhone.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,6 +1,7 @@
 {
   "attractions": [
     {
+      "id": 1,
       "name": "CN Tower",
       "description": "Iconic tower with a revolving restaurant",
       "address": "CN Tower, 290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",

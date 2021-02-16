@@ -67,12 +67,13 @@ public class AttractionsActivity extends AppCompatActivity {
         JSONHelper jsonHelper = new JSONHelper();
         try {
             JSONArray jsonArray = jsonHelper.convertToJSONObject(
-                    jsonHelper.loadJSONFile(this, "attractions.json")).
+                    jsonHelper.assetsFileReader(this, "attractions.json")).
                     getJSONArray(getString(R.string.attractions_json_key));
             Attraction attractions[] = new Attraction[jsonArray.length()];
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject attractionJsonObject = jsonArray.getJSONObject(i);
                 Attraction attraction = new Attraction();
+                attraction.setId(attractionJsonObject.getInt(getString(R.string.attraction_id_key)));
                 attraction.setName(attractionJsonObject.getString(getString(R.string.attraction_name_key)));
                 attraction.setDescription(attractionJsonObject.getString(getString(R.string.attraction_description_key)));
                 attraction.setAddress(attractionJsonObject.getString(getString(R.string.attraction_address_key)));
