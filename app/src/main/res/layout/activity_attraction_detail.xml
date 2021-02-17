@@ -6,17 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AttractionDetailActivity">
 
-    <ListView
-        android:id="@+id/lvAttractionDetails"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_attraction">
-
-    </ListView>
-
     <Button
         android:id="@+id/btnBack"
         android:layout_width="match_parent"
@@ -28,13 +17,25 @@
         android:onClick="back"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:elevation="0dp"
         app:icon="@drawable/abc_vector_test"
         app:iconPadding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/lvAttractionDetails" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lvAttractionDetails"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack"
+        tools:listitem="@layout/item_attraction">
+
+    </ListView>
 
     <Button
         android:id="@+id/btnAttractionDetailsLogout"
@@ -47,7 +48,7 @@
         android:onClick="logout"
         android:text="@string/logout_text"
         android:textAllCaps="false"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:elevation="0dp"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

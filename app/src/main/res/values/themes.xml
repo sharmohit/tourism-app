@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.TourismApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#185186</item>
-        <item name="colorPrimaryVariant">#0A263C</item>
+        <item name="colorPrimary">@color/toronto_blue</item>
+        <item name="colorPrimaryVariant">@color/toronto_dark_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">#C73F3F</item>
-        <item name="colorSecondaryVariant">#C93F3C</item>
+        <item name="colorSecondaryVariant">@color/toronto_dark_red</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
