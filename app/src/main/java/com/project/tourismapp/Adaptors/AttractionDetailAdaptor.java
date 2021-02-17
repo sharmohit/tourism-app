@@ -72,6 +72,13 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
             }
         });
 
+        tvAttractionAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWeb(getContext().getString(R.string.map_uri) + tvAttractionAddress.getText().toString() + "\"");
+            }
+        });
+
         tvAttractionPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

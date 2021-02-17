@@ -5,7 +5,7 @@
     <string name="password_hint">Enter password</string>
     <string name="remember_me_text">Remember Me?</string>
     <string name="login_text">Login</string>
-    <string name="attractions_title_text">Toronto Attractions</string>
+    <string name="attraction_details_text">Attraction Details</string>
     <string name="logout_text">Logout</string>
     <string name="back_text">Go Back</string>
     <string name="per_ticket_text">(per ticket)</string>
@@ -43,4 +43,5 @@
     <string name="attraction_website_key">website</string>
 
     <string name="phone_uri">tel://</string>
+    <string name="map_uri">http://maps.google.co.in/maps?q=</string>
 </resources>
