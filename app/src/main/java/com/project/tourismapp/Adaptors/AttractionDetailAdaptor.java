@@ -2,7 +2,6 @@ package com.project.tourismapp.Adaptors;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +38,11 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         }
 
         ImageView ivAttractionMain = convertView.findViewById(R.id.ivAttractionDetailMain);
+        ImageView ivAttractionPhoto1 = convertView.findViewById(R.id.ivAttractionPhoto1);
+        ImageView ivAttractionPhoto2 = convertView.findViewById(R.id.ivAttractionPhoto2);
+        ImageView ivAttractionPhoto3 = convertView.findViewById(R.id.ivAttractionPhoto3);
+        ImageView ivAttractionPhoto4 = convertView.findViewById(R.id.ivAttractionPhoto4);
+
         TextView tvAttractionName = convertView.findViewById(R.id.tvAttractionDetailName);
         TextView tvAttractionDescription = convertView.findViewById(R.id.tvAttractionDetailDescription);
         TextView tvAttractionAddress = convertView.findViewById(R.id.tvAttractionDetailAddress);
@@ -47,7 +51,12 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         TextView tvAttractionWeb = convertView.findViewById(R.id.tvAttractionDetailWeb);
         RatingBar rbAttraction = convertView.findViewById(R.id.rbAttraction);
 
-        ivAttractionMain.setImageResource(getContext().getResources().getIdentifier("cn_tower_main", "drawable", getContext().getPackageName()));
+        ivAttractionMain.setImageResource(getDrawableResourceId(attraction.getIcon()));
+        ivAttractionPhoto1.setImageResource(getDrawableResourceId(attraction.getPhotos()[0]));
+        ivAttractionPhoto2.setImageResource(getDrawableResourceId(attraction.getPhotos()[1]));
+        ivAttractionPhoto3.setImageResource(getDrawableResourceId(attraction.getPhotos()[2]));
+        ivAttractionPhoto4.setImageResource(getDrawableResourceId(attraction.getPhotos()[3]));
+
         tvAttractionName.setText(attraction.getName());
         tvAttractionDescription.setText(attraction.getDescription());
         tvAttractionAddress.setText(attraction.getAddress());
@@ -94,5 +103,9 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         if (intent.resolveActivity(getContext().getPackageManager()) != null) {
             getContext().startActivity(intent);
         }
+    }
+
+    private int getDrawableResourceId(String name) {
+        return getContext().getResources().getIdentifier(name, "drawable", getContext().getPackageName());
     }
 }

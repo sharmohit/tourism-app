@@ -78,8 +78,18 @@ public class AttractionsActivity extends AppCompatActivity {
                 attraction.setDescription(attractionJsonObject.getString(getString(R.string.attraction_description_key)));
                 attraction.setAddress(attractionJsonObject.getString(getString(R.string.attraction_address_key)));
                 attraction.setPrice(attractionJsonObject.getDouble(getString(R.string.attraction_price_key)));
+                attraction.setIcon(attractionJsonObject.getString(getString(R.string.attraction_icon_key)));
                 attraction.setPhone(attractionJsonObject.getString(getString(R.string.attraction_phone_key)));
                 attraction.setWebsite(attractionJsonObject.getString(getString(R.string.attraction_website_key)));
+
+                JSONArray photosJSONArray = attractionJsonObject.getJSONArray(getString(R.string.attraction_photos_key));
+                int photoslength = photosJSONArray.length();
+                String[] photos = new String[photoslength];
+                for (int j = 0; j < photoslength; j++) {
+                    photos[j] = photosJSONArray.getString(j);
+                }
+                attraction.setPhotos(photos);
+
                 attractions[i] = attraction;
             }
 

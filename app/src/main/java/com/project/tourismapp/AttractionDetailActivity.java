@@ -122,7 +122,7 @@ public class AttractionDetailActivity extends AppCompatActivity {
             }
         }
 
-        if(!ratingExist && attractionRating.getRating() > 0) {
+        if (!ratingExist && attractionRating.getRating() > 0) {
             JSONObject userJSONObject = new JSONObject();
             userJSONObject.put(getString(R.string.attraction_id_json_key), attractionRating.getAttractionId());
             userJSONObject.put(getString(R.string.rating_json_key), attractionRating.getRating());

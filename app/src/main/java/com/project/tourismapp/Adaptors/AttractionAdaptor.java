@@ -26,8 +26,7 @@ public class AttractionAdaptor extends ArrayAdapter<Attraction> {
 
         Attraction attraction = getItem(position);
 
-        if(convertView == null)
-        {
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_attraction, parent, false);
         }
 
@@ -35,7 +34,8 @@ public class AttractionAdaptor extends ArrayAdapter<Attraction> {
         TextView tvAttractionName = convertView.findViewById(R.id.tvAttractionName);
         TextView tvAttractionAddress = convertView.findViewById(R.id.tvAttractionAddress);
 
-        ivAttractionMain.setImageResource(R.drawable.cn_tower_main);
+        ivAttractionMain.setImageResource(
+                getContext().getResources().getIdentifier(attraction.getIcon(), "drawable", getContext().getPackageName()));
         tvAttractionName.setText(attraction.getName());
         tvAttractionAddress.setText(attraction.getAddress());
         return convertView;

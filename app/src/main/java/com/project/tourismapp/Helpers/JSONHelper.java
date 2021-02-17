@@ -53,10 +53,8 @@ public class JSONHelper {
             response = output.toString();
             bufferedReader.close();
             return convertToJSONObject(response);
-        }
-        else
-        {
-            return  null;
+        } else {
+            return null;
         }
     }
 
