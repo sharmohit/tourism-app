@@ -19,22 +19,39 @@
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:insetLeft="-5dp"
+        android:insetTop="0dp"
+        android:insetRight="-5dp"
+        android:insetBottom="0dp"
         android:onClick="back"
-        android:text="@string/back_text"
+        android:textAlignment="viewStart"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp"
+        app:elevation="0dp"
+        app:icon="@drawable/abc_vector_test"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lvAttractionDetails" />
 
     <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnAttractionDetailsLogout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:insetLeft="-5dp"
+        android:insetTop="0dp"
+        android:insetRight="-5dp"
+        android:insetBottom="0dp"
         android:onClick="logout"
         android:text="@string/logout_text"
         android:textAllCaps="false"
+        android:textSize="18sp"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
