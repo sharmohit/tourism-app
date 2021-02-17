@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#F1F1F1">
+    android:background="#F1F1F1"
+    android:paddingBottom="4dp">
 
     <ImageView
         android:id="@+id/ivAttractionMain"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="320dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,29 +21,48 @@
         android:id="@+id/tvAttractionName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#606060"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_dark_grey"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivAttractionMain"
-        app:layout_constraintVertical_bias="0.120000005" />
+        app:layout_constraintTop_toBottomOf="@+id/ivAttractionMain" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttractionName" />
 
     <TextView
         android:id="@+id/tvAttractionAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="30dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="30dp"
-        android:textColor="#606060"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="@color/text_dark_grey"
+        android:textSize="18sp"
+        app:drawableLeftCompat="@android:drawable/ic_menu_mylocation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvAttractionName"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/divider_horizontal_bright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttractionAddress" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

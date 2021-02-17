@@ -64,7 +64,6 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         tvAttractionPhone.setText(attraction.getPhone());
         tvAttractionWeb.setText(attraction.getWebsite());
 
-        rbAttraction.setStepSize(1f);
         rbAttraction.setRating(this.session.getUser().getAttractionRating().getRating());
         rbAttraction.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
