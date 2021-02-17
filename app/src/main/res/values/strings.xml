@@ -8,6 +8,7 @@
     <string name="attractions_title_text">Toronto Attractions</string>
     <string name="logout_text">Logout</string>
     <string name="back_text">Go Back</string>
+    <string name="per_ticket_text">(per ticket)</string>
 
     <string name="preference_file_key">com.project.tourismapp.config</string>
     <string name="remember_me_key">remember_me_key</string>
