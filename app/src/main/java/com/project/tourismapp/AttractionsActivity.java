@@ -37,12 +37,12 @@ public class AttractionsActivity extends AppCompatActivity {
         }
 
         ListView lvAttractions = findViewById(R.id.lvAttractions);
-        Attraction attraction[] = createAttractions();
-        AttractionAdaptor attractionAdaptor = new AttractionAdaptor(this, attraction);
+        Attraction attractions[] = createAttractions();
+        AttractionAdaptor attractionAdaptor = new AttractionAdaptor(this, attractions);
         lvAttractions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startAttractionDetailsActivity(attraction[position]);
+                startAttractionDetailsActivity(attractions[position]);
             }
         });
         lvAttractions.setAdapter(attractionAdaptor);

@@ -53,12 +53,13 @@ public class AttractionDetailActivity extends AppCompatActivity {
         /* Setup ListView */
         ListView lvAttractionDetails = findViewById(R.id.lvAttractionDetails);
         AttractionDetailAdaptor attractionDetailAdaptor = new AttractionDetailAdaptor(
-                this, session, new Attraction[]{attraction});
+                this, this.session, new Attraction[]{attraction});
         lvAttractionDetails.setAdapter(attractionDetailAdaptor);
     }
 
     @Override
     protected void onPause() {
+        super.onPause();
         /* Saving user's rating */
         try {
             JSONHelper jsonHelper = new JSONHelper();
@@ -68,7 +69,6 @@ public class AttractionDetailActivity extends AppCompatActivity {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-        super.onPause();
     }
 
     @Override
@@ -108,20 +108,23 @@ public class AttractionDetailActivity extends AppCompatActivity {
     }
 
     private void addRatingToJSONObject(AttractionRating attractionRating) throws JSONException {
+        boolean ratingExist = false;
+        JSONArray jsonArray = new JSONArray();
         if (this.jsonRatingObject.has(getString(R.string.user_ratings_json_key))) {
-            JSONArray jsonArray = this.jsonRatingObject.getJSONArray(getString(R.string.user_ratings_json_key));
-            for (int i = 0; i <= jsonArray.length(); i++) {
+            jsonArray = this.jsonRatingObject.getJSONArray(getString(R.string.user_ratings_json_key));
+            for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject ratingObject = jsonArray.getJSONObject(i);
                 if (ratingObject.getInt(getString(R.string.attraction_id_json_key)) == attractionRating.getAttractionId()) {
                     ratingObject.put(getString(R.string.rating_json_key), attractionRating.getRating());
+                    ratingExist = true;
                     break;
                 }
             }
-            this.jsonRatingObject.has("");
-        } else {
-            JSONArray jsonArray = new JSONArray();
+        }
+
+        if(!ratingExist && attractionRating.getRating() > 0) {
             JSONObject userJSONObject = new JSONObject();
-            userJSONObject.put(getString(R.string.attraction_id_key), attractionRating.getAttractionId());
+            userJSONObject.put(getString(R.string.attraction_id_json_key), attractionRating.getAttractionId());
             userJSONObject.put(getString(R.string.rating_json_key), attractionRating.getRating());
             jsonArray.put(userJSONObject);
             this.jsonRatingObject.put(getString(R.string.user_ratings_json_key), jsonArray);

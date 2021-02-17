@@ -40,6 +40,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tvAttractionDetailName" />
 
     <TextView
+        android:id="@+id/tvAttractionPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$195"
+        android:textColor="#606060"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbAttraction" />
+
+    <TextView
         android:id="@+id/tvAttractionDetailDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rbAttraction" />
+        app:layout_constraintTop_toBottomOf="@+id/tvAttractionPrice" />
 
     <TextView
         android:id="@+id/tvAttractionDetailAddress"
@@ -94,5 +107,45 @@
         app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvAttractionDetailPhone" />
+
+    <ImageView
+        android:id="@+id/ivAttractionPhoto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAttractionDetailWeb"
+        app:srcCompat="@drawable/cn_tower_main" />
+
+    <ImageView
+        android:id="@+id/ivAttractionPhoto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAttractionPhoto1"
+        app:srcCompat="@drawable/cn_tower_main" />
+
+    <ImageView
+        android:id="@+id/ivAttractionPhoto3"
+        android:layout_width="wrap_content"
+        android:layout_height="303dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAttractionPhoto2"
+        app:srcCompat="@drawable/cn_tower_main" />
+
+    <ImageView
+        android:id="@+id/ivAttractionPhoto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivAttractionPhoto3"
+        app:srcCompat="@drawable/cn_tower_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

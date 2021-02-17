@@ -3,18 +3,82 @@
     {
       "id": 1,
       "name": "CN Tower",
-      "description": "Iconic tower with a revolving restaurant",
-      "address": "CN Tower, 290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
+      "description": "The CN Tower is a 553.3 m-high concrete communications and observation tower located in Downtown Toronto, Ontario, Canada. Built on the former Railway Lands, it was completed in 1976. Its name \"CN\" originally referred to Canadian National, the railway company that built the tower. Following the railway's decision to divest non-core freight railway assets prior to the company's privatization in 1995, it transferred the tower to the Canada Lands Company, a federal Crown corporation responsible for real estate development. The CN Tower held the record for the world's tallest free-standing structure for 32 years until 2007 when it was surpassed by the Burj Khalifa, and was the world's tallest tower until 2009 when it was surpassed by the Canton Tower. It is now the ninth tallest free-standing structure in the world and remains the tallest free-standing structure on land in the Western Hemisphere.",
+      "address": "290 Bremner Blvd, Toronto, ON M5V 3L9, Canada",
       "price": 195.00,
-      "icon": "icon",
+      "icon": "cn_tower",
       "photos": [
-        "photo1",
-        "photo2",
-        "photo3",
-        "photo4"
+        "cn_tower_1",
+        "cn_tower_2",
+        "cn_tower_3",
+        "cn_tower_4"
       ],
-      "phone": "(855) 553-3833",
+      "phone": "(416) 868-6937",
       "website": "https://www.cntower.ca/en-ca/home.html"
+    },
+    {
+      "id": 2,
+      "name": "Royal Ontario Museum",
+      "description": "The Royal Ontario Museum is a museum of art, world culture and natural history in Toronto, Ontario, Canada. It is one of the largest museums in North America and the largest in Canada. It attracts more than one million visitors every year, making the ROM the most-visited museum in Canada. The museum is north of Queen's Park, in the University of Toronto district, with its main entrance on Bloor Street West. Museum subway station is named after the ROM and, since a 2008 renovation, is decorated to resemble the institution's collection. Established on 16 April 1912 and opened on 19 March 1914, the museum has maintained close relations with the University of Toronto throughout its history, often sharing expertise and resources.",
+      "address": "100 Queens Park, Toronto, ON M5S 2C6, Canada",
+      "price": 23.00,
+      "icon": "royal_ontario_museum",
+      "photos": [
+        "royal_ontario_museum_1",
+        "royal_ontario_museum_2",
+        "royal_ontario_museum_3",
+        "royal_ontario_museum_4"
+      ],
+      "phone": "(416) 586-8000",
+      "website": "https://www.rom.on.ca/"
+    },
+    {
+      "id": 3,
+      "name": "Casa Loma",
+      "description": "Casa Loma is a Gothic Revival style mansion and garden in midtown Toronto, Ontario, Canada, that is now a historic house museum and landmark. It was constructed from 1911 to 1914 as a residence for financier Sir Henry Pellatt. The architect was E. J. Lennox, who designed several other city landmarks. Casa Loma sits at an elevation of 140 metres above sea level. Due to its unique architectural character in Toronto, Casa Loma has been a popular filming location for movies and television. It is also a popular venue for wedding ceremonies, and Casa Loma can be rented in the evenings after the museum closes to the public.",
+      "address": "1 Austin Terrace, Toronto, ON M5R 1X8, Canada",
+      "price": 30.00,
+      "icon": "casa_loma",
+      "photos": [
+        "casa_loma_1",
+        "casa_loma_2",
+        "casa_loma_3",
+        "casa_loma_4"
+      ],
+      "phone": "(416) 923-1171",
+      "website": "http://www.casaloma.ca/"
+    },
+    {
+      "id": 4,
+      "name": "Rogers Centre",
+      "description": "Rogers Centre is a multi-purpose stadium in Downtown Toronto, Canada, situated just southwest of the CN Tower near the northern shore of Lake Ontario. Opened in 1989 on the former Railway Lands, it is home to the Toronto Blue Jays of Major League Baseball. Previously, the stadium was also home to the Toronto Argonauts of the Canadian Football League and the Toronto Raptors of the National Basketball Association. The Buffalo Bills of the National Football League played an annual game at the stadium as part of the Bills Toronto Series from 2008 to 2013. While it is primarily a sports venue, it also hosts other large events such as conventions, trade fairs, concerts, travelling carnivals, circuses and monster truck shows. The stadium was renamed \"RogersCentre\" following the 2005 purchase of the stadium by Rogers Communications, which also owns the Toronto Blue Jays.",
+      "address": "1 Blue Jays Way, Toronto, ON M5V 1J1, Canada",
+      "price": 44.00,
+      "icon": "rogers_centre",
+      "photos": [
+        "rogers_centre_1",
+        "rogers_centre_2",
+        "rogers_centre_3",
+        "rogers_centre_4"
+      ],
+      "phone": "(416) 341-1234",
+      "website": "https://www.mlb.com/bluejays/ballpark/information"
+    },
+    {
+      "id": 5,
+      "name": "Toronto Zoo",
+      "description": "The Toronto Zoo is a zoo located in Toronto, Ontario, Canada. Encompassing 287 hectares, the Toronto Zoo is the largest zoo in Canada. It is divided into seven zoogeographic regions: Indo-Malaya, Africa, Americas, Tundra Trek, Australasia, Eurasia, and the Canadian Domain. Some animals are displayed indoors in pavilions and outdoors in what would be their naturalistic environments, with viewing at many levels. It also has areas such as the Kids Zoo, Waterside Theatre, and Splash Island. It has one of the most taxonomically diverse collection of animals on display of any zoo; it is currently home to over 5,000 animals representing over 500 species. The zoo is open to the public every day of the year except December 25.",
+      "address": "2000 Meadowvale Rd, Toronto, ON M1B 5K7, Canada",
+      "price": 27.99,
+      "icon": "toronto_zoo",
+      "photos": [
+        "toronto_zoo_1",
+        "toronto_zoo_2",
+        "toronto_zoo_3",
+        "toronto_zoo_4"
+      ],
+      "phone": "(416) 392-5900",
+      "website": "https://www.torontozoo.com/"
     }
   ]
 }

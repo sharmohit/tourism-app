@@ -2,6 +2,7 @@ package com.project.tourismapp.Adaptors;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,17 +42,20 @@ public class AttractionDetailAdaptor extends ArrayAdapter<Attraction> {
         TextView tvAttractionName = convertView.findViewById(R.id.tvAttractionDetailName);
         TextView tvAttractionDescription = convertView.findViewById(R.id.tvAttractionDetailDescription);
         TextView tvAttractionAddress = convertView.findViewById(R.id.tvAttractionDetailAddress);
+        TextView tvAttractionPrice = convertView.findViewById(R.id.tvAttractionPrice);
         TextView tvAttractionPhone = convertView.findViewById(R.id.tvAttractionDetailPhone);
         TextView tvAttractionWeb = convertView.findViewById(R.id.tvAttractionDetailWeb);
         RatingBar rbAttraction = convertView.findViewById(R.id.rbAttraction);
 
-        ivAttractionMain.setImageResource(R.drawable.cn_tower_main);
+        ivAttractionMain.setImageResource(getContext().getResources().getIdentifier("cn_tower_main", "drawable", getContext().getPackageName()));
         tvAttractionName.setText(attraction.getName());
         tvAttractionDescription.setText(attraction.getDescription());
         tvAttractionAddress.setText(attraction.getAddress());
+        tvAttractionPrice.setText("$" + attraction.getPrice());
         tvAttractionPhone.setText(attraction.getPhone());
         tvAttractionWeb.setText(attraction.getWebsite());
 
+        rbAttraction.setStepSize(1f);
         rbAttraction.setRating(this.session.getUser().getAttractionRating().getRating());
         rbAttraction.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
